@@ -188,6 +188,19 @@ footer a{color:var(--green-700); font-weight:600; text-decoration:none;}
 .step h3{font-size:17px; color:var(--green-900); margin-bottom:6px;}
 .step p{font-size:13.5px; line-height:1.6; color:var(--ink-soft); margin:0;}
 
+.dl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:980px;margin:0 auto;}
+.dl{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;}
+.dl.best{border:2px solid var(--green-700);}
+.dl .kicker{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--green-600);margin-bottom:6px;}
+.dl h3{font-size:19px;color:var(--green-900);margin:0 0 4px;}
+.dl .p{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;color:var(--green-900);margin:2px 0 12px;}
+.dl .p small{font-size:13px;color:var(--ink-soft);font-weight:600;}
+.dl ul{list-style:none;padding:0;margin:0 0 18px;flex:1;}
+.dl li{font-size:13.5px;line-height:1.5;color:var(--ink);padding:5px 0 5px 22px;position:relative;}
+.dl li:before{content:"✓";position:absolute;left:0;color:var(--green-600);font-weight:700;}
+.dl .btn{justify-content:center;}
+.dl-note{text-align:center;font-size:13px;color:var(--ink-soft);margin:22px auto 0;max-width:640px;line-height:1.6;}
+@media (max-width:860px){.dl-grid{grid-template-columns:1fr;}}
 .pricing{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:start; max-width:920px; margin:0 auto;}
 .plan{background:var(--paper); border:2px solid var(--green-700); border-radius:18px; padding:30px; box-shadow:var(--shadow-lg); position:relative;}
 .plan .tag{position:absolute; top:-13px; left:30px; background:var(--amber); color:#fff; font-size:12px; font-weight:700; padding:5px 12px; border-radius:20px;}
@@ -247,6 +260,7 @@ footer a{color:var(--green-700); font-weight:600; text-decoration:none;}
     </div>
     <nav class="nav">
       <a class="link" href="#pricing">Pricing</a>
+      <a class="link" href="#free">Free download</a>
       <a class="link" href="#faq">FAQ</a>
       <a class="btn ghost sm" href="https://tickets.vayora.au">Sign in</a>
       <a class="btn primary sm" href="https://tickets.vayora.au/?signup=1">Start free trial</a>
@@ -399,6 +413,31 @@ footer a{color:var(--green-700); font-weight:600; text-decoration:none;}
   </div>
 </section>
 
+<section class="section" id="free" style="padding-top:20px;">
+  <div class="section-head">
+    <h2>Rather have a download?</h2>
+    <p>Vayora Tickets Free runs on one computer, with no account and no internet needed. Your products stay on that computer.</p>
+  </div>
+  <div class="dl-grid">
+    <div class="dl">
+      <div class="kicker">Download</div><h3>Free</h3><div class="p">A$0</div>
+      <ul><li>Shelf tags and A7 / A5 / A4 promo tickets</li><li>Barcodes, Excel / CSV import, backups</li><li>Clean tickets for your first 60 days</li><li>Then a small "Printed free with Vayora Tickets" line on each ticket</li></ul>
+      <a class="btn primary" href="/free/Vayora-Tickets-Free.html" download="Vayora Tickets Free.html">Download free</a>
+    </div>
+    <div class="dl">
+      <div class="kicker">Download</div><h3>Plus</h3><div class="p">A$49<small> /year</small></div>
+      <ul><li>No watermark</li><li>Your store logo on tickets</li><li>Colour themes for promo tickets</li><li>Saved layouts and text sizes</li><li>Auto-backup to a folder · email support</li></ul>
+      <a class="btn ghost" href="https://tickets.vayora.au/licence.html?tier=plus">Get Plus</a>
+    </div>
+    <div class="dl best">
+      <div class="kicker">Download · best value</div><h3>Lifetime</h3><div class="p">A$99<small> once</small></div>
+      <ul><li>Everything in Plus, forever</li><li>Price-change import: print only what changed</li><li>Sale scheduling and "ending this week" list</li><li>Up to 3 store profiles</li></ul>
+      <a class="btn primary" href="https://tickets.vayora.au/licence.html?tier=life">Get Lifetime</a>
+    </div>
+  </div>
+  <p class="dl-note">Download the free version first, then upgrade from inside the app any time. Need staff logins, phone scanning and cloud backup? That's the <a href="#pricing" style="color:var(--green-700);font-weight:600;">online version</a>.</p>
+</section>
+
 <section class="section" id="faq" style="padding-top:20px;">
   <div class="section-head"><h2>Questions</h2></div>
   <div class="faq">
@@ -407,6 +446,8 @@ footer a{color:var(--green-700); font-weight:600; text-decoration:none;}
     <details><summary>Can I start another free trial?</summary><p>Free trials are one per business. If an ABN, account, device or internet connection has already had a trial, a new store goes straight to the subscription page — everything else works the same. If that's happened by mistake (for example a shared office connection), just contact us and we'll sort it out.</p></details>
     <details><summary>Do my staff need their own accounts?</summary><p>No. Staff open the app on their phone, tap "I'm on staff", and enter your store code and their name. Scans and prints are tagged with who did them. Managers who need full access can be invited by email.</p></details>
     <details><summary>What printer and paper do I need?</summary><p>Any normal office printer. Print on plain A4 and cut, or use pre-cut / perforated shelf ticket sheets — presets are built in for common Australian stock, plus an alignment test page.</p></details>
+    <details><summary>Is there a free version?</summary><p>Yes — download Vayora Tickets Free. It runs on one computer with no account. Tickets are clean for the first 60 days; after that each ticket carries a small "Printed free with Vayora Tickets" line. Plus (A$49/year) or Lifetime (A$99 once) removes it and adds extras like your logo on tickets.</p></details>
+    <details><summary>How does "Refer a store" work?</summary><p>Share your link from "🎁 Refer a store" in the app. The store you refer gets a 60-day free trial instead of 30. When they pay for their subscription, you get a free month — taken off your next bill, or added to your trial. Free-download users get 3 months of Plus instead.</p></details>
     <details><summary>Can I cancel?</summary><p>Yes, any time. You keep access until the end of the period you've paid for.</p></details>
   </div>
 </section>
