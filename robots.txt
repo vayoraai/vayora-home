@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /free/
+
+Sitemap: https://vayora.au/sitemap.xml
