@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vayora Tickets — online — Vayora Tickets</title>
+<meta name="description" content="How to set up your store, import products, scan, and print shelf and promo tickets with tickets.vayora.au.">
+<link rel="icon" href="https://tickets.vayora.au/icon-192.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{--green-900:#173d2e;--green-700:#1f5c41;--green-600:#2d7a52;--green-100:#e6f0e8;--cream:#faf7ef;--paper:#fff;--ink:#20241f;--ink-soft:#5c6459;--line:#e0dccd;--amber:#d97a1f;--amber-100:#fbe9d4;--red:#b3372c;}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:76px;}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;}
+a{color:var(--green-700);font-weight:600;}
+h1,h2,h3{font-family:'Space Grotesk',system-ui,sans-serif;color:var(--green-900);line-height:1.2;}
+.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 24px;background:rgba(250,247,239,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--green-900);font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;}
+.brand .mark{width:30px;height:30px;border-radius:8px;background:var(--green-700);display:flex;align-items:center;justify-content:center;}
+.top nav{display:flex;gap:6px;align-items:center;flex-wrap:wrap;}
+.top nav a{font-size:13.5px;text-decoration:none;padding:7px 12px;border-radius:8px;color:var(--ink-soft);}
+.top nav a:hover{color:var(--green-700);}
+.top nav a.pdf{background:var(--green-700);color:#fff;}
+.cover{max-width:1180px;margin:0 auto;padding:46px 24px 10px;}
+.cover .kicker{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--green-600);}
+.cover h1{font-size:40px;margin:6px 0 10px;letter-spacing:-.4px;}
+.cover .sub{font-size:17px;color:var(--ink-soft);max-width:640px;margin:0;}
+.cover .updated{font-size:12.5px;color:var(--ink-soft);margin-top:10px;}
+.layout{max-width:1180px;margin:0 auto;padding:18px 24px 60px;display:grid;grid-template-columns:230px minmax(0,1fr);gap:44px;}
+.toc-in{position:sticky;top:78px;font-size:13.5px;}
+.toc b{display:block;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--ink-soft);margin-bottom:8px;}
+.toc ol{margin:0;padding-left:20px;line-height:1.5;}
+.toc li{margin:0 0 7px;}
+.toc a{font-weight:500;color:var(--ink);text-decoration:none;}
+.toc a:hover{color:var(--green-700);}
+main{min-width:0;max-width:820px;}
+main section{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:28px 30px;margin-bottom:22px;box-shadow:0 1px 2px rgba(23,61,46,.05),0 4px 14px rgba(23,61,46,.05);}
+main h2{font-size:25px;margin:0 0 12px;}
+main h3{font-size:17.5px;margin:24px 0 8px;}
+main p{margin:0 0 12px;}
+main ul,main ol{margin:0 0 14px;padding-left:22px;}
+main li{margin:0 0 6px;}
+.steps{counter-reset:s;list-style:none;padding-left:0;}
+.steps > li{counter-increment:s;position:relative;padding-left:40px;margin-bottom:12px;}
+.steps > li:before{content:counter(s);position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;background:var(--green-700);color:#fff;font:700 13px/26px 'Space Grotesk',sans-serif;text-align:center;}
+.btnref{display:inline-block;font-weight:600;font-size:.92em;padding:1px 8px;border:1px solid var(--line);border-radius:6px;background:var(--cream);white-space:nowrap;}
+.tip,.warn,.plus{border-radius:10px;padding:12px 15px;margin:14px 0;font-size:14.5px;}
+.tip{background:var(--green-100);border:1px solid #cfe2d5;color:var(--green-900);}
+.warn{background:var(--amber-100);border:1px solid #f0cfa6;color:#6b3d0d;}
+.plus{background:#eef2fb;border:1px solid #cdd8f5;color:#2d3d75;}
+.tip b:first-child,.warn b:first-child,.plus b:first-child{margin-right:4px;}
+figure.shot{margin:16px 0 20px;}
+figure.shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:10px;box-shadow:0 6px 20px rgba(23,61,46,.10);background:#fff;}
+figure.shot.center img{margin:0 auto;}
+figure.shot.phone img{border-radius:22px;}
+figure.shot figcaption{font-size:13px;color:var(--ink-soft);margin-top:8px;text-align:center;}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start;}
+.pair figure.shot{margin:8px 0;}
+table.ref{width:100%;border-collapse:collapse;font-size:14.5px;margin:6px 0 10px;}
+table.ref th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);border-bottom:1px solid var(--line);padding:8px 8px 8px 0;}
+table.ref td{border-bottom:1px solid #efebdf;padding:9px 8px 9px 0;vertical-align:top;}
+table.ref td:first-child{font-weight:600;white-space:nowrap;padding-right:14px;}
+details{border:1px solid var(--line);border-radius:10px;padding:10px 14px;margin:0 0 8px;background:var(--cream);}
+details summary{cursor:pointer;font-weight:600;}
+details p{margin:8px 0 2px;font-size:15px;}
+footer{text-align:center;font-size:13px;color:var(--ink-soft);padding:10px 24px 40px;}
+@media (max-width:600px){
+  .top{padding:10px 16px;}
+  .top nav a:not(.pdf){display:none;}
+  .brand span:last-child{white-space:nowrap;}
+}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:10px;}
+  .toc-in{position:static;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:14px 16px;}
+  .cover h1{font-size:30px;}
+  main section{padding:22px 18px;}
+  .pair{grid-template-columns:1fr;}
+  table.ref td:first-child{white-space:normal;}
+}
+@media print{
+  @page{size:A4;margin:14mm 13mm;}
+  html{scroll-behavior:auto;}
+  body{background:#fff;font-size:11pt;line-height:1.5;}
+  .top,.toc,footer{display:none;}
+  .cover{padding:40mm 0 0;page-break-after:always;min-height:240mm;}
+  .cover h1{font-size:34pt;}
+  .cover .sub{font-size:14pt;}
+  .layout{display:block;padding:0;max-width:none;}
+  main{max-width:none;}
+  main section{border:none;box-shadow:none;padding:0;margin:0 0 6mm;break-before:page;}
+  main section:first-child{break-before:auto;}
+  main h2{font-size:18pt;}
+  figure.shot{break-inside:avoid;}
+  figure.shot img{box-shadow:none;max-height:150mm;width:auto;max-width:100%;}
+  .pair{grid-template-columns:1fr 1fr;}
+  .tip,.warn,.plus,details,table.ref tr{break-inside:avoid;}
+  details{border:none;padding:0;background:none;}
+  details summary{list-style:none;}
+  a{color:var(--green-700);text-decoration:none;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/"><span class="mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2L22 12L12 22L2 12L12 2Z" fill="#fff"/><circle cx="12" cy="8.2" r="2" fill="#1f5c41"/></svg></span><span>Vayora Tickets</span></a>
+  <nav><a href="/guide-free/">Free download guide</a><a class="pdf" href="Vayora-Tickets-Store-Guide.pdf" download>Download PDF</a></nav>
+</header>
+<div class="cover">
+  <div class="kicker">Store guide</div>
+  <h1>Vayora Tickets — online</h1>
+  <p class="sub">How to set up your store, import products, scan, and print shelf and promo tickets with tickets.vayora.au.</p>
+  <p class="updated">Updated October 2026</p>
+</div>
+<div class="layout">
+  <aside class="toc"><div class="toc-in"><b>Contents</b><ol><li><a href="#overview">What Vayora Tickets does</a></li><li><a href="#start">Start your free trial</a></li><li><a href="#tour">A quick tour</a></li><li><a href="#import">Add your products</a></li><li><a href="#queue">Build your print queue</a></li><li><a href="#promo">Promo tickets and offers</a></li><li><a href="#print">Preview and print</a></li><li><a href="#batches">Save and reprint batches</a></li><li><a href="#staff">Staff and managers</a></li><li><a href="#subscription">Your subscription</a></li><li><a href="#refer">Refer a store</a></li><li><a href="#help">Troubleshooting</a></li><li><a href="#cheatsheet">Quick reference</a></li></ol></div></aside>
+  <main>
+<section>
+<h2 id="overview">What Vayora Tickets does</h2>
+<p>Vayora Tickets prints shelf price tags and promotional tickets with scannable barcodes, from your product list, on any normal office printer. It runs in your web browser at <a href="https://tickets.vayora.au">tickets.vayora.au</a>, so there's nothing to install.</p>
+<p>Your catalog, print queue and saved batches are stored online and sync live. Staff can scan products on their phones while you print from the computer in the back office.</p>
+<h3>What you need</h3>
+<ul>
+  <li>A computer with Chrome, Edge or Safari, and a printer that prints A4.</li>
+  <li>Your product list as an Excel or CSV file. Most POS systems can export one.</li>
+  <li>Optional: a USB or Bluetooth barcode scanner, or just your phone's camera.</li>
+  <li>Optional: pre-cut shelf ticket sheets such as Vision Supply or POS'99. Plain A4 works too.</li>
+</ul>
+</section>
+
+<section>
+<h2 id="start">Start your free trial</h2>
+<ol class="steps">
+  <li>Go to <a href="https://tickets.vayora.au/?signup=1">tickets.vayora.au</a> and choose <span class="btnref">Start free trial</span>.</li>
+  <li>Enter your email and a password (at least 6 characters), then click <span class="btnref">Create account</span>.</li>
+  <li>Open the email we send you and click the confirmation link. Back in the app, click <span class="btnref">I've confirmed — continue</span>.</li>
+  <li>Enter your <b>store name</b> and <b>ABN</b>, then click <span class="btnref">Start 30-day free trial</span>.</li>
+</ol>
+<div class="pair">
+<figure class="shot"><img src="img/o01-signup.webp" alt="Start free trial screen" loading="lazy" style="max-width:420px"><figcaption>Create your owner account.</figcaption></figure>
+<figure class="shot"><img src="img/o02-start-trial.webp" alt="Confirm email and start your store" loading="lazy" style="max-width:420px"><figcaption>Confirm your email, then name your store.</figcaption></figure>
+</div>
+<div class="tip"><b>Good to know:</b> the trial is free for 30 days and needs no card. There's one free trial per business. If you were sent a <b>referral link</b> by another store, your trial is 60 days.</div>
+<p>Next time, just open <a href="https://tickets.vayora.au">tickets.vayora.au</a> and sign in. Forgot your password? Use <span class="btnref">Forgot your password?</span> on the sign-in screen.</p>
+</section>
+
+<section>
+<h2 id="tour">A quick tour</h2>
+<figure class="shot"><img src="img/o03-catalog.webp" alt="The main screen with the catalog" loading="lazy"><figcaption>The main screen: your store bar, the toolbar, and the Catalog, Print Queue and Batches tabs.</figcaption></figure>
+<table class="ref">
+  <tr><th>Part</th><th>What it's for</th></tr>
+  <tr><td>Store bar (dark green)</td><td>Your store name and <b>store code</b> (staff use it to join). The trial / subscription badge, <span class="btnref">❓ Help</span>, <span class="btnref">🎁 Refer a store</span>, <span class="btnref">Staff / members</span>.</td></tr>
+  <tr><td>Toolbar</td><td>Import a product file, add a product, scan, change ticket fields and paper, choose the ticket type, search, and <span class="btnref">Preview &amp; Print</span>.</td></tr>
+  <tr><td>Catalog</td><td>All your products. Add any of them to the print queue with <b>＋</b>.</td></tr>
+  <tr><td>Print Queue</td><td>The tickets you're about to print, with copies, bay/aisle and promo details.</td></tr>
+  <tr><td>Batches</td><td>Print runs you've saved to reprint later.</td></tr>
+  <tr><td>Counters (top right)</td><td>Products in the catalog, rows queued, tickets and pages to print.</td></tr>
+</table>
+</section>
+
+<section>
+<h2 id="import">Add your products</h2>
+<h3>Import an Excel or CSV file</h3>
+<ol class="steps">
+  <li>Export your product list from your POS or supplier as Excel (.xlsx) or CSV. It needs at least a <b>name</b>, <b>barcode</b> and <b>price</b> column.</li>
+  <li>Click <span class="btnref">Import Excel / CSV</span> and choose the file.</li>
+  <li>Check the columns are matched correctly (most are matched automatically), then click <span class="btnref">Import products</span>.</li>
+</ol>
+<figure class="shot"><img src="img/o04-import-match.webp" alt="Match your columns" loading="lazy"><figcaption>Tell the app which column in your file is which.</figcaption></figure>
+<ul>
+  <li>Products whose barcode is already in your catalog are <b>updated</b>, not duplicated. Re-importing your price file each week keeps prices current.</li>
+  <li>Rows without a name, barcode or price are skipped.</li>
+  <li><b>Remove products not in this file</b> is for a full catalog replacement. Leave it off for partial updates.</li>
+</ul>
+<h3>Add a product by hand</h3>
+<p>Click <span class="btnref">＋ Add product</span>, fill in the name, barcode and price (plus anything else you want on the ticket), and save.</p>
+</section>
+
+<section>
+<h2 id="queue">Build your print queue</h2>
+<p>Everything you want to print goes into the <b>Print Queue</b> first. There are three ways to add to it:</p>
+<ul>
+  <li><b>From the catalog:</b> set the number of copies and click <b>＋</b> next to the product.</li>
+  <li><b>USB or Bluetooth scanner:</b> click <span class="btnref">USB / BT scanner</span> and scan. Each scan adds one ticket, and scanning the same item again adds another copy.</li>
+  <li><b>Phone camera:</b> click <span class="btnref">Scan with phone</span>, point the barcode inside the box and tap <span class="btnref">Tap to Scan</span>.</li>
+</ul>
+<figure class="shot"><img src="img/o05-scanner.webp" alt="Scanner ready bar" loading="lazy"><figcaption>With the scanner bar open, every scan lands in the Print Queue, tagged with the current bay/aisle.</figcaption></figure>
+<div class="tip"><b>Tip:</b> type a location into <b>Current bay / aisle</b> before you start scanning a section. Every scanned ticket is tagged with it, and the queue is sorted by aisle, so the printed tickets come out in walking order.</div>
+<p>Scanned a barcode that isn't in your catalog? The app opens the Add product form with the barcode filled in. These products are also listed under <span class="btnref">New from scanning</span>, which you can export to add them to your POS.</p>
+<figure class="shot"><img src="img/o08-queue.webp" alt="The Print Queue" loading="lazy"><figcaption>The Print Queue: change the bay, ticket type, promo details or copies on any row.</figcaption></figure>
+</section>
+
+<section>
+<h2 id="promo">Promo tickets and offers</h2>
+<h3>Ticket types</h3>
+<table class="ref">
+  <tr><th>Type</th><th>Size</th><th>Use it for</th></tr>
+  <tr><td>Shelf tag</td><td>Fits your chosen paper (e.g. 3×8 on plain A4, or a pre-cut preset)</td><td>Everyday shelf prices</td></tr>
+  <tr><td>Promo A7</td><td>74×105mm, 8 per A4 (landscape)</td><td>Specials on the shelf edge</td></tr>
+  <tr><td>Promo A5</td><td>148×210mm, 2 per A4</td><td>End-of-aisle and display specials</td></tr>
+  <tr><td>Promo A4</td><td>Full A4 page</td><td>Window, counter and front-end signs</td></tr>
+</table>
+<p>Choose the type in the toolbar before adding items, or change it for any row in the Print Queue.</p>
+<h3>Setting an offer</h3>
+<p>Each promo row in the Print Queue has these <b>promo details</b>:</p>
+<ul>
+  <li><b>Offer type:</b> <i>% off</i> (e.g. 20% OFF, shows the was/now price), <i>Special price</i> (NOW $4.00), <i>Bundle deal</i> (2 FOR $7.00) or <i>Custom text</i> (e.g. HALF PRICE).</li>
+  <li><b>Label:</b> a small tag such as "Weekly special".</li>
+  <li><b>Sale dates:</b> printed as "Valid 28 Oct – 3 Nov".</li>
+</ul>
+<figure class="shot"><img src="img/o08b-queue-promo-row.webp" alt="Promo details on a queue row" loading="lazy"><figcaption>Promo details on a queue row: label, sale dates and a bundle deal.</figcaption></figure>
+<p>Scanning a whole promotion? Choose the promo type in the toolbar and tick <b>Ask for offer on each scan</b>. After every scan, a small box asks for the offer.</p>
+<div class="pair">
+<figure class="shot"><img src="img/o06-promo-toolbar.webp" alt="Promo A7 with Ask for offer ticked" loading="lazy"><figcaption>Promo type selected, "Ask for offer on each scan" ticked.</figcaption></figure>
+<figure class="shot"><img src="img/o07-offer-prompt.webp" alt="Set an offer box" loading="lazy" style="max-width:420px"><figcaption>Set the offer straight after the scan.</figcaption></figure>
+</div>
+<figure class="shot"><img src="img/o09b-a7-sheet.webp" alt="A7 promo tickets, 8 per A4 sheet" loading="lazy"><figcaption>Promo A7: eight tickets on a landscape A4 sheet. Cut along the dashed lines.</figcaption></figure>
+<figure class="shot center"><img src="img/o09c-a4-ticket.webp" alt="A4 promo ticket" loading="lazy" style="max-width:420px"><figcaption>Promo A4 with a custom offer, label and sale dates.</figcaption></figure>
+<p>Need a list of this week's offers for your POS or staff? With promo tickets in the queue, use <span class="btnref">Export offers CSV</span> or <span class="btnref">Export offers Excel</span> under the Print Queue.</p>
+</section>
+
+<section>
+<h2 id="print">Preview and print</h2>
+<ol class="steps">
+  <li>Click <span class="btnref">Preview &amp; Print</span>. You'll see exactly how the sheets will print, with the number of tickets and pages.</li>
+  <li>Click <span class="btnref">Print now</span>.</li>
+  <li>In the print window, choose your printer, <b>A4</b> paper, and scale <b>Default</b> or <b>100%</b>. Don't use "Fit to page". Then print.</li>
+</ol>
+<figure class="shot"><img src="img/o09-preview.webp" alt="Print preview" loading="lazy"><figcaption>The preview shows every page before you print.</figcaption></figure>
+<figure class="shot center"><img src="img/o09d-shelf-sheet.webp" alt="Shelf tags on A4" loading="lazy" style="max-width:560px"><figcaption>Shelf tags on plain A4. Long product names shrink automatically to fit.</figcaption></figure>
+<div class="warn"><b>Barcodes not scanning?</b> They're printed at true size so POS scanners can read them. Printing at "Fit to page" or a shrunk scale makes them too small, so always print at 100%.</div>
+<h3>Choose your paper and fields</h3>
+<p>Click <span class="btnref">Fields</span> to choose what appears on shelf tags (MRP struck through, unit, category, bay/aisle, best-before) and which paper you print on.</p>
+<figure class="shot center"><img src="img/o10-fields-paper.webp" alt="Ticket fields and layout" loading="lazy" style="max-width:560px"><figcaption>Ticket fields &amp; layout, with a pre-cut paper preset selected.</figcaption></figure>
+<ul>
+  <li><b>Plain A4:</b> set columns × rows (e.g. 3 × 8) and cut the tags yourself.</li>
+  <li><b>Pre-cut sheets:</b> choose your stock (Vision Supply 24UP/30UP/33UP, POS'99 33UP) or <b>Custom</b> to enter your own measurements.</li>
+  <li>With pre-cut stock, print <span class="btnref">🖨️ Print alignment test page</span> first and hold it against a real sheet up to the light. If everything is the right size but slightly off, adjust <b>nudge right / nudge down</b> by a millimetre or two.</li>
+</ul>
+</section>
+
+<section>
+<h2 id="batches">Save and reprint batches</h2>
+<p>Once your queue is ready, click <span class="btnref">Save as batch</span> under the Print Queue. Give it a name (e.g. "Weekly specials — 21 Oct") and, if you like, an aisle, bay or zone. Usually the queue is cleared afterwards so you can start the next run.</p>
+<figure class="shot"><img src="img/o11-batches.webp" alt="Saved batches" loading="lazy"><figcaption>Saved batches, marked once printed.</figcaption></figure>
+<ul>
+  <li><span class="btnref">Preview &amp; Print</span> on a batch reprints it any time, and marks it as printed.</li>
+  <li><b>Change format…</b> switches every ticket in a batch to another type, e.g. reprint your A7 specials as A4 signs.</li>
+</ul>
+</section>
+
+<section>
+<h2 id="staff">Staff and managers</h2>
+<p>Click <span class="btnref">Staff / members</span> to see who has access to your store.</p>
+<figure class="shot center"><img src="img/o12-members.webp" alt="Staff and members" loading="lazy" style="max-width:560px"><figcaption>Staff / members: your team, invitations and your subscription.</figcaption></figure>
+<h3>Staff (no account needed)</h3>
+<ol class="steps">
+  <li>Give staff your <b>store code</b>, shown in the store bar (e.g. GVG001).</li>
+  <li>On their phone or computer, they open <a href="https://tickets.vayora.au">tickets.vayora.au</a>, tap <span class="btnref">I'm on staff — join with a store code</span>, and enter the code and their name.</li>
+  <li>Their scans and prints are tagged with their name. To remove someone, click <b>Remove</b> next to their name.</li>
+</ol>
+<div class="pair">
+<figure class="shot phone"><img src="img/o17-phone-staff-join.webp" alt="Join as staff on a phone" loading="lazy" style="max-width:300px"><figcaption>Joining as staff on a phone.</figcaption></figure>
+<figure class="shot phone"><img src="img/o18-phone-app.webp" alt="The app on a phone" loading="lazy" style="max-width:300px"><figcaption>The app works on phones too, which is ideal for scanning on the shop floor.</figcaption></figure>
+</div>
+<h3>Managers and co-owners</h3>
+<p>For someone who needs full access (settings, staff, subscription), enter their email under <b>Invite another owner / manager</b>. They create an account with that email, confirm it, then choose <span class="btnref">I was invited</span> and enter your store code.</p>
+</section>
+
+<section>
+<h2 id="subscription">Your subscription</h2>
+<p>The badge in the store bar shows your plan, e.g. <b>Free trial · 24 days left · Subscribe</b>.</p>
+<figure class="shot center"><img src="img/o14-badge-trial.webp" alt="Trial badge" loading="lazy" style="max-width:360px"></figure>
+<table class="ref">
+  <tr><th>When</th><th>Price</th></tr>
+  <tr><td>First 30 days</td><td>Free, no card needed</td></tr>
+  <tr><td>Next 3 months</td><td>A$10/month (launch offer)</td></tr>
+  <tr><td>After that</td><td>A$25/month per store: unlimited staff, devices and tickets</td></tr>
+</table>
+<ul>
+  <li><b>Subscribe:</b> click the badge (or <span class="btnref">Subscribe</span> in Staff / members) and pay on Stripe's secure page. The store unlocks within seconds.</li>
+  <li><b>Manage:</b> once subscribed, the badge says <b>Subscribed · Manage</b>. Click it to update your card, download tax invoices or cancel.</li>
+  <li><b>Cancelling</b> keeps access until the end of the period you've paid for.</li>
+  <li>If the trial ends without a subscription, the app shows the payment page. <b>Nothing is deleted</b>: your catalog, queue and batches are all there when you subscribe.</li>
+</ul>
+<figure class="shot center"><img src="img/o15-paywall.webp" alt="Payment page" loading="lazy" style="max-width:420px"><figcaption>The payment page after the trial.</figcaption></figure>
+</section>
+
+<section>
+<h2 id="refer">Refer a store</h2>
+<p>Know another shop that prints price tickets? Click <span class="btnref">🎁 Refer a store</span> and send them your link by WhatsApp, text message or email.</p>
+<figure class="shot center"><img src="img/o13-refer.webp" alt="Refer a store" loading="lazy" style="max-width:560px"><figcaption>Your referral link and how many stores have joined.</figcaption></figure>
+<ul>
+  <li>They get a <b>60-day</b> free trial instead of 30.</li>
+  <li>When they pay for their subscription, <b>you get a free month</b>. It comes off your next bill, or adds 30 days if you're still on your trial.</li>
+  <li>Up to 12 free months a year. A reward is taken back if the referred store's payment is refunded within 30 days.</li>
+</ul>
+</section>
+
+<section>
+<h2 id="help">Troubleshooting</h2>
+<details><summary>Barcodes won't scan at the register</summary><p>Print at <b>100% / Default</b> scale, not "Fit to page". Check the barcode in your product list is the full number on the pack (usually 13 digits). Very worn toner can also cause it.</p></details>
+<details><summary>Tickets don't line up with my pre-cut sheets</summary><p>In <b>Fields</b>, check the paper preset matches your stock, print the alignment test page and hold it against a sheet. Use the nudge fields for small shifts. Printers differ by a millimetre or two, which is normal.</p></details>
+<details><summary>A long product name is cut short</summary><p>Text shrinks automatically to fit. On very small tags, the name is limited to two lines. Shorten the name in the catalog if you need all of it, or use a bigger ticket type.</p></details>
+<details><summary>Staff can't join</summary><p>Check they're entering the store code exactly as shown in your store bar, and choosing "I'm on staff" (not signing in with an email).</p></details>
+<details><summary>I didn't get the confirmation email</summary><p>Check your spam or junk folder, then use <b>Resend email</b>. Make sure you signed up with the right address.</p></details>
+<details><summary>My store opened on the payment page straight away</summary><p>Free trials are one per business. If your ABN, account, device or internet connection has already had a trial, a new store starts on the subscription. If that's a mistake (e.g. a shared office connection), email us and we'll sort it out.</p></details>
+<details><summary>Can I use it on more than one computer or phone?</summary><p>Yes. Sign in (or join as staff) on any device. Everything syncs live.</p></details>
+<p>Still stuck? Email <a href="mailto:vayora.ai@gmail.com">vayora.ai@gmail.com</a> with your store code and a screenshot.</p>
+</section>
+
+<section>
+<h2 id="cheatsheet">Quick reference</h2>
+<table class="ref">
+  <tr><th>To…</th><th>Do this</th></tr>
+  <tr><td>Load products</td><td>Import Excel / CSV → match columns → Import products</td></tr>
+  <tr><td>Update prices</td><td>Import your new price file. Matching barcodes are updated.</td></tr>
+  <tr><td>Queue tickets</td><td>Catalog ＋, USB / BT scanner, or Scan with phone</td></tr>
+  <tr><td>Make a special</td><td>Ticket type Promo A7/A5/A4 → set the offer, label and dates in the Print Queue</td></tr>
+  <tr><td>Print</td><td>Preview &amp; Print → Print now → A4, 100%</td></tr>
+  <tr><td>Use pre-cut sheets</td><td>Fields → Shelf tag paper → print the alignment test</td></tr>
+  <tr><td>Reprint later</td><td>Save as batch → Batches → Preview &amp; Print</td></tr>
+  <tr><td>Add staff</td><td>Give them the store code → "I'm on staff"</td></tr>
+  <tr><td>Subscribe / manage billing</td><td>Click the plan badge in the store bar</td></tr>
+  <tr><td>Get help</td><td>❓ Help in the store bar, or vayora.ai@gmail.com</td></tr>
+</table>
+</section>
+
+  </main>
+</div>
+<script>window.addEventListener("beforeprint",()=>document.querySelectorAll("details").forEach(d=>d.open=true));</script>
+<footer>© 2026 Vayora · <a href="mailto:vayora.ai@gmail.com">vayora.ai@gmail.com</a> · <a href="/">vayora.au</a></footer>
+</body>
+</html>
