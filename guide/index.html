@@ -196,7 +196,7 @@ footer{text-align:center;font-size:13px;color:var(--ink-soft);padding:10px 24px 
 <h3>Ticket types</h3>
 <table class="ref">
   <tr><th>Type</th><th>Size</th><th>Use it for</th></tr>
-  <tr><td>Shelf tag</td><td>Fits your chosen paper (e.g. 3×8 on plain A4, or a pre-cut preset)</td><td>Everyday shelf prices</td></tr>
+  <tr><td>Shelf tag</td><td>Fits your chosen paper: plain A4, pre-cut ticket sheets or label sheets (see <a href="#print">Preview and print</a>)</td><td>Everyday shelf prices</td></tr>
   <tr><td>Promo A7</td><td>74×105mm, 8 per A4 (landscape)</td><td>Specials on the shelf edge</td></tr>
   <tr><td>Promo A5</td><td>148×210mm, 2 per A4</td><td>End-of-aisle and display specials</td></tr>
   <tr><td>Promo A4</td><td>Full A4 page</td><td>Window, counter and front-end signs</td></tr>
@@ -230,13 +230,25 @@ footer{text-align:center;font-size:13px;color:var(--ink-soft);padding:10px 24px 
 <figure class="shot"><img src="img/o09-preview.webp" alt="Print preview" loading="lazy"><figcaption>The preview shows every page before you print.</figcaption></figure>
 <figure class="shot center"><img src="img/o09d-shelf-sheet.webp" alt="Shelf tags on A4" loading="lazy" style="max-width:560px"><figcaption>Shelf tags on plain A4. Long product names shrink automatically to fit.</figcaption></figure>
 <div class="warn"><b>Barcodes not scanning?</b> They're printed at true size so POS scanners can read them. Printing at "Fit to page" or a shrunk scale makes them too small, so always print at 100%.</div>
-<h3>Choose your paper and fields</h3>
-<p>Click <span class="btnref">Fields</span> to choose what appears on shelf tags (MRP struck through, unit, category, bay/aisle, best-before) and which paper you print on.</p>
-<figure class="shot center"><img src="img/o10-fields-paper.webp" alt="Ticket fields and layout" loading="lazy" style="max-width:560px"><figcaption>Ticket fields &amp; layout, with a pre-cut paper preset selected.</figcaption></figure>
+<h3>Choose your ticket paper</h3>
+<p>The <span class="btnref">🧾 paper</span> button in the toolbar shows which paper your shelf tags print on. Click it to pick a different one. Every sheet is drawn to scale, so you can match it to the paper in your hand.</p>
+<figure class="shot"><img src="img/o10b-paper-picker.webp" alt="Choose your ticket paper" loading="lazy"><figcaption>Pick your sheet. Search by the number of tickets per sheet (e.g. "30"), the layout ("3x10") or the product code ("L7160").</figcaption></figure>
+<table class="ref">
+  <tr><th>Group</th><th>Papers</th></tr>
+  <tr><td>Pre-cut shelf ticket sheets</td><td>21UP, 24UP, 27UP, 30UP, 33UP and 40UP edge-to-edge sheets; Vision Supply 24UP / 30UP / 33UP; POS'99 33UP</td></tr>
+  <tr><td>Label sheets</td><td>Avery and compatible labels (Officeworks): L7173 (10), L7165 (8), L7163 (14), L7162 (16), L7161 (18), L7160 (21), L7159 (24), L7157 (33), L7651 (65)</td></tr>
+  <tr><td>Plain A4</td><td>3×7, 3×8, 3×9, 3×10, 3×11, 4×10, 2×8, 2×5, or any columns × rows. Print and cut yourself.</td></tr>
+</table>
+<p><b>Paper not listed?</b> Click <b>My paper isn't listed</b>. Measure one ticket with a ruler, count the tickets across and down, and measure from the top and left edge of the sheet to the first ticket. The app works out the gaps. Choose <span class="btnref">Save to My papers &amp; use</span> to keep it for next time.</p>
+<figure class="shot center"><img src="img/o10d-paper-custom.webp" alt="Enter your own paper measurements" loading="lazy" style="max-width:640px"><figcaption>Your own paper: six measurements, with a live drawing.</figcaption></figure>
+<h3>Fields, sample tag and fine-tuning</h3>
+<p>Click <span class="btnref">Fields</span> to choose what appears on shelf tags (MRP struck through, unit, category, bay/aisle, best-before). It also shows your paper and a <b>sample shelf tag at real size</b>, so you can check the fit before printing.</p>
+<figure class="shot center"><img src="img/o10-fields-paper.webp" alt="Ticket fields and layout" loading="lazy" style="max-width:560px"><figcaption>Ticket fields &amp; layout, with the chosen paper and a real-size sample tag.</figcaption></figure>
 <ul>
-  <li><b>Plain A4:</b> set columns × rows (e.g. 3 × 8) and cut the tags yourself.</li>
-  <li><b>Pre-cut sheets:</b> choose your stock (Vision Supply 24UP/30UP/33UP, POS'99 33UP) or <b>Custom</b> to enter your own measurements.</li>
-  <li>With pre-cut stock, print <span class="btnref">🖨️ Print alignment test page</span> first and hold it against a real sheet up to the light. If everything is the right size but slightly off, adjust <b>nudge right / nudge down</b> by a millimetre or two.</li>
+  <li>With pre-cut sheets or labels, print <span class="btnref">🖨️ Print alignment test page</span> first and hold it against a real sheet up to the light.</li>
+  <li>If everything is the right size but sits slightly off, use the <b>Fine-tune</b> arrows (▲ ▼ ◀ ▶) to shift the whole sheet in 0.5mm steps, then test again.</li>
+  <li>Tickets that touch the edge of the sheet automatically keep their text away from the edge, because most printers can't print the outer few millimetres.</li>
+  <li>Very narrow tickets are marked <b>⚠ narrow</b>: barcodes print smaller there, so test-scan one sheet first.</li>
 </ul>
 </section>
 
@@ -301,7 +313,7 @@ footer{text-align:center;font-size:13px;color:var(--ink-soft);padding:10px 24px 
 <section>
 <h2 id="help">Troubleshooting</h2>
 <details><summary>Barcodes won't scan at the register</summary><p>Print at <b>100% / Default</b> scale, not "Fit to page". Check the barcode in your product list is the full number on the pack (usually 13 digits). Very worn toner can also cause it.</p></details>
-<details><summary>Tickets don't line up with my pre-cut sheets</summary><p>In <b>Fields</b>, check the paper preset matches your stock, print the alignment test page and hold it against a sheet. Use the nudge fields for small shifts. Printers differ by a millimetre or two, which is normal.</p></details>
+<details><summary>Tickets don't line up with my pre-cut sheets</summary><p>Click the 🧾 paper button and check the paper matches your stock (count the tickets per sheet). In <b>Fields</b>, print the alignment test page and hold it against a sheet, then use the Fine-tune arrows for small shifts. Printers differ by a millimetre or two, which is normal. If your paper isn't listed, use "My paper isn't listed".</p></details>
 <details><summary>A long product name is cut short</summary><p>Text shrinks automatically to fit. On very small tags, the name is limited to two lines. Shorten the name in the catalog if you need all of it, or use a bigger ticket type.</p></details>
 <details><summary>Staff can't join</summary><p>Check they're entering the store code exactly as shown in your store bar, and choosing "I'm on staff" (not signing in with an email).</p></details>
 <details><summary>I didn't get the confirmation email</summary><p>Check your spam or junk folder, then use <b>Resend email</b>. Make sure you signed up with the right address.</p></details>
@@ -319,7 +331,7 @@ footer{text-align:center;font-size:13px;color:var(--ink-soft);padding:10px 24px 
   <tr><td>Queue tickets</td><td>Catalog ＋, USB / BT scanner, or Scan with phone</td></tr>
   <tr><td>Make a special</td><td>Ticket type Promo A7/A5/A4 → set the offer, label and dates in the Print Queue</td></tr>
   <tr><td>Print</td><td>Preview &amp; Print → Print now → A4, 100%</td></tr>
-  <tr><td>Use pre-cut sheets</td><td>Fields → Shelf tag paper → print the alignment test</td></tr>
+  <tr><td>Change paper</td><td>🧾 paper button in the toolbar → pick your sheet → print the alignment test once</td></tr>
   <tr><td>Reprint later</td><td>Save as batch → Batches → Preview &amp; Print</td></tr>
   <tr><td>Add staff</td><td>Give them the store code → "I'm on staff"</td></tr>
   <tr><td>Subscribe / manage billing</td><td>Click the plan badge in the store bar</td></tr>
