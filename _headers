@@ -1,3 +1,9 @@
 /free/*
   Content-Disposition: attachment; filename="Vayora Tickets Free.html"
   Cache-Control: no-cache
+
+/guide/*.pdf
+  X-Robots-Tag: noindex
+
+/guide-free/*.pdf
+  X-Robots-Tag: noindex
