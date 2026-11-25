@@ -7,3 +7,7 @@
 
 /guide-free/Vayora-Tickets-Free-Guide.pdf
   X-Robots-Tag: noindex
+
+# Preview and workers.dev copies of the site: never index them.
+https://:worker.:subdomain.workers.dev/*
+  X-Robots-Tag: noindex
