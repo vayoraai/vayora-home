@@ -60,7 +60,7 @@ footer.site .foot-legal{max-width:1180px;margin:18px auto 0;font-size:12.5px;}
 <li><b>Your store name and ABN</b>, to set up your store and check that each business gets one free trial.</li>
 <li><b>Your products, print queue and saved batches</b>, so your team sees the same data on every device.</li>
 <li><b>Staff names</b> that your staff enter when they join with your store code, so scans and prints show who did them.</li>
-<li><b>How you found us</b>: the campaign tags (for example <code>utm_source=facebook</code>) or the name of the website that linked to us, if any. This contains no personal details.</li>
+<li><b>How you found us</b>, only if you accepted analytics cookies: the campaign tags (for example <code>utm_source=facebook</code>) or the name of the website that linked to us, from your first and most recent visit, and whether you tried the free sample ticket maker first. This contains no personal details.</li>
 <li><b>Setup milestones</b>: the dates of your store's first import, first scan and first print, so we can see where new stores get stuck and improve the app.</li>
 </ul>
 <p>To make sure each business gets only one free trial, the app also checks a scrambled (hashed) copy of the ABN, the account, the device and the internet connection used to start a trial.</p>
@@ -73,7 +73,8 @@ footer.site .foot-legal{max-width:1180px;margin:18px auto 0;font-size:12.5px;}
 <li>Google Analytics only loads after you click <b>Accept</b>. If you click <b>No thanks</b>, nothing is sent to Google.</li>
 <li>We never send your name, email address, ABN, phone number, store name or store code to Google.</li>
 <li>Google signals and advertising features are switched off.</li>
-<li>Web addresses are sent without their search parameters, apart from campaign tags.</li>
+<li>Our own events send cleaned web addresses (campaign tags only), and Google Analytics is set to redact email addresses and named address parameters before storing them.</li>
+<li>What you type into the sample ticket maker is never sent anywhere.</li>
 </ul>
 <p>You can change your mind at any time: <a href="#" data-vt-consent-open>Cookie settings</a>.</p>
 </section>
@@ -82,7 +83,9 @@ footer.site .foot-legal{max-width:1180px;margin:18px auto 0;font-size:12.5px;}
 <div class="table-wrap"><table class="ref">
 <tr><th>Cookie</th><th>Why</th><th>How long</th></tr>
 <tr><td><code>vt_consent</code></td><td>Remembers whether you accepted Google Analytics</td><td>1 year</td></tr>
-<tr><td><code>vt_utm</code></td><td>Remembers which campaign or website brought you here, so a trial you start later can be credited to it. Contains no personal details.</td><td>90 days</td></tr>
+<tr><td><code>vt_utm</code></td><td>Only if you click Accept. Remembers which campaign or website brought you here (first and latest visit), so a trial you start later can be credited to it. Contains no personal details.</td><td>90 days</td></tr>
+<tr><td><code>vt_sample</code></td><td>Only if you click Accept. Notes that you used the free sample ticket maker and which ticket size, not what you typed.</td><td>90 days</td></tr>
+<tr><td><code>vt_internal</code></td><td>Set only on Vayora's own devices so our own visits are left out of the figures</td><td>Up to 400 days</td></tr>
 <tr><td><code>_ga</code>, <code>_ga_*</code></td><td>Google Analytics, only if you click Accept</td><td>Up to 2 years</td></tr>
 </table></div>
 <p>The app also uses your browser's local storage to keep you signed in and remember your settings on that device.</p>
