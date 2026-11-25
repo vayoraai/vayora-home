@@ -1,0 +1,14 @@
+// Cloudflare Workers static-assets config.
+// Same settings `wrangler deploy` was auto-generating on every production
+// build (Worker "vayora-home", Framework: Static, Output Directory: .).
+// Committed so preview branches, which run `wrangler versions upload`, can
+// build too (that command cannot auto-generate a config).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "vayora-home",
+  "compatibility_date": "2026-11-23",
+  "observability": { "enabled": true },
+  "assets": { "directory": "." },
+  "workers_dev": true,
+  "preview_urls": true
+}
