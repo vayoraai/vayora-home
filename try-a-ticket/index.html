@@ -326,6 +326,8 @@ document.addEventListener('DOMContentLoaded', function(){
   var generated = {};   // formats already reported as generated, this page view
   var track = function(n,p){ try{ if(window.vtTrack) window.vtTrack(n, p||{}); }catch(e){} };
   track('sample_maker_open', {});
+  // Visitors who accept the cookie choice on this page: count the open then.
+  document.addEventListener('vt-consent', function(e){ if(e.detail === 'granted') track('sample_maker_open', {}); });
 
   function val(id){ return ($(id).value || '').trim(); }
   function money(s){ s = String(s).replace(/[$,\s]/g,''); if(!/^\d{0,5}(\.\d{0,2})?$/.test(s) || s==='' || s==='.') return NaN; return parseFloat(s); }
